@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>test07</title>
+	<style>
+		.all {
+			width: 1000px;
+			height: 500px;
+			overflow: hidden;
+			margin: 0 auto;
+			margin-top: 0px;
+		}
+
+		.rightdiv {
+			width: 350px;
+			height: 500px;
+			float: right;
+			display: inline-block;
+
+			text-align: center;
+			font-size: 25px;
+			line-height: 50px;
+		}
+
+		.leftdiv {
+			width: 650px;
+			height: 500px;
+			float: left;
+			display: inline-block;
+			background-color: snow;
+		}
+
+		#img1 {
+			width: 650px;
+			height: 500px;
+			display: none;
+			left: -700px
+		}
+
+		#img2 {
+			width: 650px;
+			height: 500px;
+			display: none
+		}
+
+		#img3 {
+			width: 650px;
+			height: 500px;
+			display: none
+		}
+
+		#img4 {
+			width: 650px;
+			height: 500px;
+			display: none
+		}
+
+		#img5 {
+			width: 650px;
+			height: 500px;
+			display: none
+		}
+
+		.dh1 {
+			margin-top: 5px;
+			height: 90px;
+			background-color: #e68c8b;
+			line-height: 90px;
+
+		}
+
+		.dh2 {
+			margin-top: 5px;
+			height: 90px;
+			background-color: #e68c8b;
+			line-height: 90px;
+		}
+
+		.dh3 {
+			margin-top: 5px;
+			height: 90px;
+			background-color: #e68c8b;
+			line-height: 90px;
+		}
+
+		.dh4 {
+			margin-top: 5px;
+			height: 90px;
+			background-color: #e68c8b;
+			line-height: 90px;
+		}
+
+		.dh5 {
+			margin-top: 5px;
+			height: 90px;
+			background-color: #e68c8b;
+			line-height: 90px;
+		}
+	</style>
+	<script>
+
+		var dhlist = document.getElementById("right").getElementsByTagName("div");
+		var imglist = document.getElementById("left").getElementsByTagName("img");
+		// var imgArray = ["q1.jpg", "q2.jpg", "q3.jpg", "q4.jpg", "q5.jpg"]
+		for (var i = 0; i <= dhlist.length; i++) {
+			dhlist[i].onmouseover = function () {
+				imglist[i].style.display = "inline-block";
+				imglist[i].style.backgroundColor = "white";
+			}
+			dhlist[i].onmouseout = function () {
+				imglist[i].style.display = "none";
+			}
+				
+
+		}
+
+
+		function on1() { document.getElementById("img1").style.display = "block"; }
+		function out1() { 
+			document.getElementById("img1").style.display = "none";
+			document.getElementById("img1").style.backgroundColor = "white"; 
+		}
+
+		function on2() { 
+			document.getElementById("img2").style.display = "block";
+			 }
+		function out2() { 
+			document.getElementById("img2").style.display = "none";
+			document.getElementById("img2").style.backgroundColor = "white";
+		}
+
+		function on3() { document.getElementById("img3").style.display = "block"; }
+		function out3() { 
+			document.getElementById("img3").style.display = "none";
+			document.getElementById("img3").style.backgroundColor = "white"; 
+		}
+
+		function on4() { document.getElementById("img4").style.display = "block";}
+		function out4() { 
+			document.getElementById("img4").style.display = "none";
+			document.getElementById("img4").style.backgroundColor = "white";
+		}
+
+		function on5() { document.getElementById("img5").style.display = "block"; }
+		function out5() { 
+			document.getElementById("img5").style.display = "none";
+			document.getElementById("img5").style.backgroundColor = "white";
+		}
+
+	</script>
+</head>
+
+
+
+<body>
+	<div class="all">
+		<div class="rightdiv" id="right">
+			<div class="dh1" onmouseover="on1()" onmouseout="out1()">奔腾品牌旗舰店 买买买</div>
+			<div class="dh2" onmouseover="on2()" onmouseout="out2()">爱乐士品牌旗舰店 买买买</div>
+			<div class="dh3" onmouseover="on3()" onmouseout="out3()">路易13品牌旗舰店 买买买</div>
+			<div class="dh4" onmouseover="on4()" onmouseout="out4()">宝马品牌旗舰店 买买买</div>
+			<div class="dh5" onmouseover="on5()" onmouseout="out5()">ck品牌旗舰店 买买买</div>
+		</div>
+		<div class="leftdiv" ,id="left">
+			<img id="img1" src="q1.jpg" alt="" />
+			<img id="img2" src="q2.jpg" alt="" />
+			<img id="img3" src="q3.jpg" alt="" />
+			<img id="img4" src="q4.jpg" alt="" />
+			<img id="img5" src="q5.jpg" alt="" />
+		</div>
+	</div>
+</body>
+
+</html>
